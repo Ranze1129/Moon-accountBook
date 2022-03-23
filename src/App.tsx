@@ -1,18 +1,19 @@
 import React from 'react';
-import {
-  HashRouter as Router, Switch, Route, Link, Redirect
-} from 'react-router-dom';
-import Layout from 'components/Layout';
+import {HashRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import Tags from './views/Tags';
+import Money from './views/Money';
+import Statistics from './views/ Statistics';
+import NoMatch from './views/NoMatch';
 
 
 function App() {
   return (
     <Router>
-          <Switch>
-            <Route path="/tags">
-              <Tags/>
-            </Route>
-            <Route path="/money">
+      <Switch>
+        <Route path="/tags">
+          <Tags/>
+        </Route>
+        <Route path="/money">
               <Money/>
             </Route>
             <Route path="/statistics">
@@ -24,36 +25,6 @@ function App() {
             </Route>
           </Switch>
     </Router>
-  );
-}
-
-function Statistics() {
-  return (
-    <Layout>
-      <h2>Statistics</h2>
-    </Layout>
-  );
-}
-
-function Tags() {
-  return (
-    <Layout>
-      <h2>Tags</h2>
-    </Layout>
-  );
-}
-
-function Money() {
-  return (
-    <Layout>
-      <h2>Money</h2>
-    </Layout>
-  );
-}
-
-function NoMatch() {
-  return (
-    <div>页面不存在，请输入正确地址</div>
   );
 }
 
