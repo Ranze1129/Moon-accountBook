@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {createId} from 'lib/createId';
 import {useUpdate} from './hooks/useUpdate';
+import {useHistory} from 'react-router-dom';
 
 
 const useTags = () => { // 封装一个自定义 HOOK
@@ -34,8 +35,10 @@ const useTags = () => { // 封装一个自定义 HOOK
   const updateTag = (id: number, {name}: { name: string }) => {
     setTags(tags.map(tag => tag.id === id ? {id, name} : tag));
   };
+  const history = useHistory();
   const deleteTag = (id: number) => {
     setTags(tags.filter(tag => tag.id !== id));
+    history.goBack();
   };
   const addTag = () => {
     const tagName = window.prompt('请输入新标签的名称');

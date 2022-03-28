@@ -48,7 +48,11 @@ const Tag: React.FC = () => {
   )
   const history = useHistory();
   const onClickBack = () => {
-    history.goBack();
+    if(tag.name === ''){
+      window.alert('标签名不能为空')
+    }else{
+      history.goBack();
+    }
   };
 
   return (
