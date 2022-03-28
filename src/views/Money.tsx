@@ -5,7 +5,7 @@ import {CategorySection} from './Money/CategorySection';
 import {NoteSection} from './Money/NoteSection';
 import {NumberPadSection} from './Money/NumberPadSection';
 import {TagsSection} from './Money/TagsSection';
-import {useRecord} from '../hooks/useRecord';
+import {useRecords} from '../hooks/useRecord';
 
 const MyLayout = styled(Layout)`
   display: flex;
@@ -22,7 +22,7 @@ const defaultFormData = {
 
 function Money() {
   const [selected, setSelected] = useState(defaultFormData);
-  const {addRecord} = useRecord();
+  const {addRecord} = useRecords();
   const onChange = (obj: Partial<typeof selected>) => {
     setSelected({...selected, ...obj});
   };
