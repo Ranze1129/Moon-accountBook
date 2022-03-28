@@ -13,7 +13,7 @@ const Label = styled.label`
     width: 100%;
     border: none;
     background: none;
-    height: 72px;
+    height: 44px;
   }
 `;
 
