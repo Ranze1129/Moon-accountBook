@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams, useHistory} from 'react-router-dom';
-import {useTags} from 'useTags';
+import {useTags} from 'hooks/useTags';
 import Layout from 'components/Layout';
 import Icon from 'components/Icon';
 import {Button} from 'components/Button';
@@ -49,7 +49,7 @@ const Tag: React.FC = () => {
   const history = useHistory();
   const onClickBack = () => {
     if(tag.name === ''){
-      window.alert('标签名不能为空')
+      alert('标签名不能为空')
     }else{
       history.goBack();
     }

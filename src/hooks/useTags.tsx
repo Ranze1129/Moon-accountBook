@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {createId} from 'lib/createId';
-import {useUpdate} from './hooks/useUpdate';
+import {useUpdate} from './useUpdate';
 import {useHistory} from 'react-router-dom';
 
 
@@ -10,10 +10,10 @@ const useTags = () => { // 封装一个自定义 HOOK
     let localTags = JSON.parse(window.localStorage.getItem('tags') || '[]');
     if (localTags.length === 0) {
       localTags = [
-        {id: createId(), name: '衣'},
-        {id: createId(), name: '食'},
-        {id: createId(), name: '住'},
-        {id: createId(), name: '行'}
+        {id: createId(), name: '购物'},
+        {id: createId(), name: '餐饮'},
+        {id: createId(), name: '住房'},
+        {id: createId(), name: '出行'}
       ];
     }
     setTags(localTags);
