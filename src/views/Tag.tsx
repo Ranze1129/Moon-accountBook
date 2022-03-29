@@ -58,7 +58,7 @@ const Tag: React.FC = () => {
   return (
     <Layout>
       <Topbar>
-        <Icon name="left" className="fuck" onClick={onClickBack}/>
+        <Icon name="left" onClick={onClickBack}/>
         <span>编辑标签</span>
         <Icon/>
       </Topbar>

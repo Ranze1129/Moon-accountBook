@@ -14,6 +14,14 @@ const Wrapper = styled.section`
     inset 0 5px 5px -5px rgba(0, 0, 0, 0.25);
     color: #f69d02;
   }
+  .ok {
+    height: 128px;
+    float: right;
+    width: 25%;
+    font-size: 18px;
+    border: none;
+    background: #f69d02;
+  }
   > .pad {
     > button {
       font-size: 18px;
@@ -21,10 +29,6 @@ const Wrapper = styled.section`
       width: 25%;
       height: 64px;
       border: none;
-      &.ok {
-        height: 128px;
-        float: right;
-      }
       &.zero {
         width: 50%;
       }
@@ -42,9 +46,6 @@ const Wrapper = styled.section`
       }
       &:nth-child(8), &:nth-child(11), &:nth-child(13) {
         background: #b8b8b8;
-      }
-      &:nth-child(12) {
-        background: #f69d02;
       }
       &:nth-child(14) {
         background: #a9a9a9;
