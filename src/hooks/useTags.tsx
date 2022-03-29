@@ -42,11 +42,15 @@ const useTags = () => { // 封装一个自定义 HOOK
   };
   const addTag = () => {
     const tagName = window.prompt('请输入新标签的名称');
-    if (tagName !== null && tagName!== '' ) {
+    if (tagName !== null && tagName !== '') {
       setTags([...tags, {id: createId(), name: tagName}]);
     }
   };
-  return {tags, addTag, setTags, findTag, updateTag, findTagIndex, deleteTag};
+  const getName = (id: number) => {
+    const tag = tags.filter(t => t.id === id)[0];
+    return tag ? tag.name : '';
+  };
+  return {tags, getName, addTag, setTags, findTag, updateTag, findTagIndex, deleteTag};
 };
 
 export {useTags};
