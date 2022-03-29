@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Wrapper} from './NumberPadSection/Wrapper';
 import {generateOutput} from './NumberPadSection/generateOutput';
-import {Link} from 'react-router-dom';
 
 type Props = {
   value: number
@@ -52,9 +51,7 @@ const NumberPadSection: React.FC<Props> = (props) => {
         <button>7</button>
         <button>8</button>
         <button>9</button>
-        <Link to="/statistics">
         <button className="ok">完成</button>
-        </Link>
         <button className="zero">0</button>
         <button>.</button>
       </div>

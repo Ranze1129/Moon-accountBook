@@ -5,19 +5,20 @@ const Wrapper = styled.section`
   font-size: 24px;
   > ul {
     display: flex;
+    justify-content: center;
     li {
-      width: 50%;
+      width: 30%;
       text-align: center;
-      padding: 16px 0;
+      padding: 12px 0;
       position: relative;
       &.selected::after {
         content: '';
         display: block;
         height: 3px;
-        background: #333;
+        background: white;
         position: absolute;
         width: 100%;
-        bottom: 0;
+        bottom: 3px;
         left: 0;
       }
     }
