@@ -1,6 +1,7 @@
 {
   "name": "react-morney",
   "version": "0.1.0",
+  "homepage": "https://ranze1129.github.io/Moon-website/",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
