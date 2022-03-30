@@ -21,7 +21,7 @@ const defaultFormData = {
 };
 const CategoryWrapper = styled.div`
   background: #f69d02;
-  color: white;
+  color: #fff;
   `
 function Money() {
   const [selected, setSelected] = useState(defaultFormData);
