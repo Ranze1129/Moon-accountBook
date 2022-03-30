@@ -23,6 +23,15 @@ const TagList = styled.ol`
     }
   }
 `;
+const Edit = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > span {
+    color: #959494;
+    margin-right: 10px;
+  }
+`
 
 
 function Tags() {
@@ -34,7 +43,11 @@ function Tags() {
           <li key={tag.id}>
             <Link to={'/tags/' + tag.id}>
               <span className="oneLine">{tag.name}</span>
-              <Icon name="right"/>
+              <Edit>
+               <span>编辑</span>
+                <Icon name="right"/>
+              </Edit>
+
             </Link>
           </li>
         )}

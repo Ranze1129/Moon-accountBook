@@ -5,7 +5,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   > .output {
     font-size: 36px;
-    line-height: 72px;
+    line-height: 58px;
     text-align: right;
     padding: 0 16px;
     font-family: Consolas, monospace;

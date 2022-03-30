@@ -13,7 +13,11 @@ const useTags = () => { // 封装一个自定义 HOOK
         {id: createId(), name: '购物'},
         {id: createId(), name: '餐饮'},
         {id: createId(), name: '住房'},
-        {id: createId(), name: '出行'}
+        {id: createId(), name: '出行'},
+        {id: createId(), name: '工资'},
+        {id: createId(), name: '兼职'},
+        {id: createId(), name: '奖金'},
+        {id: createId(), name: '红包'}
       ];
     }
     setTags(localTags);
@@ -41,8 +45,11 @@ const useTags = () => { // 封装一个自定义 HOOK
     history.goBack();
   };
   const addTag = () => {
+    const names = tags.map(item => item.name);
     const tagName = window.prompt('请输入新标签的名称');
-    if (tagName !== null && tagName !== '') {
+    if(names.indexOf(tagName!) >= 0){
+     alert('标签名重复了')
+    }else if (tagName !== null && tagName !== '') {
       setTags([...tags, {id: createId(), name: tagName}]);
     }
   };

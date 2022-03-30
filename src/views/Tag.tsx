@@ -21,17 +21,30 @@ const Topbar = styled.header`
   background: white;
 `;
 const InputWrapper = styled.div`
-background: white;
+  background: white;
   padding: 0 16px;
   margin-top: 8px;
-`
-
+`;
+const Label = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Delete = styled.button`
+  font-size: 18px;
+  border: none;
+  padding: 8px 12px;
+  background: #9a9999;
+  color: white;
+  border-radius: 12px;
+  margin-left: 16px;
+`;
 
 const Tag: React.FC = () => {
-  const {findTag, updateTag,deleteTag} = useTags();
-  let {id:idString} = useParams<Params>();
+  const {findTag, updateTag, deleteTag} = useTags();
+  let {id: idString} = useParams<Params>();
   const tag = findTag(parseInt(idString));
-  const tagContent =(tag:{id:number;name:string})=> (
+  const tagContent = (tag: { id: number; name: string }) => (
     <div>
       <InputWrapper>
         <Input label="标签名：" type="text" placeholder="请输入标签名"
@@ -42,7 +55,10 @@ const Tag: React.FC = () => {
         <Space/>
         <Space/>
         <Space/>
-        <Button onClick={() => deleteTag(tag.id)}>删除标签</Button>
+        <Label>
+          <Button onClick={onClickBack}>确认标签</Button>
+          <Delete onClick={() => deleteTag(tag.id)}>删除标签</Delete>
+        </Label>
       </Center>
     </div>
   )

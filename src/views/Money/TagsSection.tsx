@@ -4,14 +4,16 @@ import {useTags} from 'hooks/useTags';
 
 const Wrapper = styled.section`
   background: #ffffff;
-  padding: 12px 16px;
+  padding: 12px 12px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  flex-shrink: 1;
+  overflow: auto;
   > ol {
-    margin: 10px 0 -12px;
+    margin: 10px 0;
     > li {
       background: #d9d9d9;
       border-radius: 18px;
@@ -31,6 +33,13 @@ const Wrapper = styled.section`
     border-bottom: 1px solid #333;
     color: #666;
     margin-top: 8px;
+  }
+  @media(max-width: 400px){
+    > ol {
+      margin: 10px 0;
+      > li {
+        margin: 8px 10px;}
+    }
   }
 `;
 type Props = {
